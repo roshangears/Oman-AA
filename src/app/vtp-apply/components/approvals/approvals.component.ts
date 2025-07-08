@@ -21,6 +21,8 @@ import { MatInputModule } from '@angular/material/input';
     ],
 })
 export class ApprovalsComponent {
+  isFirstDivVisible = true;
+  
   documents = [
     { label: 'Basic Information', status: 'Approved', icon: 'assets/icons/basic-info.png' },
     { label: 'Particular Of Vehicle', status: 'Approved', icon: 'assets/icons/vehicle.png' },
@@ -44,5 +46,9 @@ export class ApprovalsComponent {
       default:
         return 'bg-gray-100 text-gray-600';
     }
+  }
+
+  toggleDivs() {
+    this.isFirstDivVisible = !this.isFirstDivVisible;
   }
 }

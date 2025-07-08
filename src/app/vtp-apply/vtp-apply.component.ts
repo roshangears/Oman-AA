@@ -22,6 +22,8 @@ import { FeeAndChargersComponent } from "./components/fee-and-chargers/fee-and-c
 import { AttachmentsComponent } from "./components/attachments/attachments.component";
 import { ReferenceSultanateOmanComponent } from "./components/reference-sultanate-oman/reference-sultanate-oman.component";
 import { ReferencesYourHomeCountryComponent } from "./components/references-your-home-country/references-your-home-country.component";
+import { MatIconModule } from '@angular/material/icon';
+import { BreadcrumbComponent } from "../components/breadcrumb/breadcrumb.component";
 @Component({
   standalone: true,
   selector: 'app-vtp-apply',
@@ -47,7 +49,9 @@ import { ReferencesYourHomeCountryComponent } from "./components/references-your
     FeeAndChargersComponent,
     AttachmentsComponent,
     ReferenceSultanateOmanComponent,
-    ReferencesYourHomeCountryComponent
+    ReferencesYourHomeCountryComponent,
+    MatIconModule,
+    BreadcrumbComponent,
 ],
 })
 export class VtpApplyComponent {
@@ -69,6 +73,12 @@ export class VtpApplyComponent {
     secondCtrl: ['', Validators.required],
   });
   isLinear = false;
+
+  breadcrumbs = [
+    { label: 'Oman Automobile Association', link: '/association' },
+    { label: 'Vehicle Transportation Permit', link: '/vehicle-transport' },
+    { label: 'Apply for VTP' }
+  ];
 
 
   url: string = 'https://www.figma.com/proto/q8AVbFD5QtnThuxROt9rZl/OAA---Oman-Automobile-Association?node-id=232-1183&t=YB1uGcm86pmjbI7T-1&scaling=contain&content-scaling=fixed&page-id=0%3A1';
