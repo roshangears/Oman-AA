@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { VtpApplyComponent } from './vtp-apply/vtp-apply.component';
+import { IdlApplyComponent } from './idl-apply/idl-apply.component';
 import { TrackComponent } from './track/track.component';
 import { TrackViewComponent } from './track-view/track-view.component';
 
@@ -10,6 +11,7 @@ const routes: Routes = [
   { path: 'vtp-apply', component: VtpApplyComponent },
   { path: 'track', component: TrackComponent },
   { path: 'track-view', component: TrackViewComponent },
+  { path: 'idl-apply', component: IdlApplyComponent},
 ];
 
 @NgModule({
